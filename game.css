@@ -1,0 +1,153 @@
+:root {
+  --backgroundMain: radial-gradient(circle, #00c6fb 0%, #005bea 100%);
+  --backgroundBtn: #1080ff;
+  --headerBc: #14146e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background: var(--backgroundMain);
+}
+header {
+  background-color: var(--headerBc);
+  padding: 10px;
+  color: white;
+}
+.restart {
+  cursor: pointer;
+  margin: 10px 0 0;
+  padding: 0.7rem 1rem;
+  font-size: 1.25rem;
+  color: white;
+  background-color: var(--backgroundBtn);
+  border-radius: 1rem;
+  border: 3px solid var(--backgroundBtn);
+}
+.restart:hover {
+  color: white;
+  background-color: hsl(212, 100%, 43%);
+}
+.restart:active {
+  color: var(--backgroundBtn);
+  background-color: white;
+}
+button {
+  border: none;
+  outline: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: box-shadow 1s;
+}
+button:active {
+  box-shadow: 0 0 10px #090979;
+  transition-duration: 0.05s;
+}
+button img {
+  object-position: 1px 1.5px;
+}
+.images {
+  margin: 65px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.comp,
+.user {
+  color: whitesmoke;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+}
+.comp p,
+.user p {
+  font-size: 3rem;
+}
+.result {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 5px 15px;
+  font-size: 50px;
+  font-weight: 600;
+  background-color: var(--headerBc);
+  color: white;
+  border-radius: 5px;
+  max-width: 90%;
+}
+.lose {
+  background-color: red;
+  color: white;
+}
+.win {
+  background-color: rgb(0, 172, 0);
+  color: white;
+}
+.tie {
+  background-color: #243449;
+  color: white;
+}
+.hide {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  button img {
+    height: 160px;
+  }
+  .restart {
+    font-size: 1rem;
+  }
+  .images {
+    margin: 40px 0 20px;
+  }
+  .comp,
+  .user {
+    font-size: 1.5rem;
+  }
+  .comp p,
+  .user p {
+    margin-top: 10px;
+    font-size: 2.5rem;
+  }
+  .result {
+    font-weight: 500;
+    font-size: 35px;
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 470px) {
+  button img {
+    height: 130px;
+  }
+  .restart {
+    font-size: 0.8rem;
+  }
+  .images {
+    margin: 30px 0 20px;
+  }
+  .comp,
+  .user {
+    font-size: 1.3rem;
+  }
+  .comp p,
+  .user p {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  .result {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 10px;
+  }
+}
